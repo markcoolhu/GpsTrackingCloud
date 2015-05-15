@@ -49,8 +49,8 @@ public class GpsService extends Service {
     // The minimum distance to change Updates in meters
     private static final float MIN_DISTANCE_CHANGE_FOR_UPDATES = 50f;
 
-
     private String deviceId;
+
     private double latitude, longitude;
 
     // Define a listener that responds to location updates
@@ -72,8 +72,6 @@ public class GpsService extends Service {
 
             if (location == null)  return;
 
-
-
             Location dest = new Location(location); //取得現在位置
             latitude = dest.getLatitude();
             longitude = dest.getLongitude();
@@ -84,8 +82,6 @@ public class GpsService extends Service {
             // save cloud DB
             Thread t1=new Thread(postData);
             t1.start();
-
-
 
         }
 
